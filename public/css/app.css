@@ -196,14 +196,19 @@ html body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  border: 1px #303a52 solid;
+  margin: 10px;
+  border-radius: 6px;
+  list-style: none;
 }
 
 .list-group .list-group-item {
-  background-color: #fdfdfd;
   padding-left: 4px;
-  border: 1px #303a52 solid;
-  border-radius: 6px;
-  margin-top: 2px;
+  border-bottom: 1px #303a52 solid;
+}
+
+.list-group .list-group-item:nth-last-child(1) {
+  border-bottom: 0;
 }
 
 @media screen and (max-width: 786px) {

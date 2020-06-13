@@ -101,12 +101,17 @@ html{
     text-decoration: none;
     display: flex;
     flex-flow: column;
+    border:1px #303a52 solid;
+    margin:10px;
+    border-radius: 6px;
+    list-style: none;
     .list-group-item{
-        background-color: map-get($colors , "light");
         padding-left: 4px;
-        border:1px #303a52 solid;
-        border-radius: 6px;
-        margin-top:2px;
+        border-bottom:1px #303a52 solid;
+    }
+    .list-group-item:nth-last-child(1)
+    {
+     border-bottom: 0;   
     }
 }
 .desktop{
