@@ -4,7 +4,7 @@ var router=express.Router();
 //home route
 router.get('/',(request,response)=>{
     response.render('index',{
-        article:'hello world'
+        title:'The Book App'
     });
 });
 
