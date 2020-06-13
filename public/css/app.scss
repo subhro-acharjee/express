@@ -56,11 +56,37 @@ html{
     overflow-x: hidden;
     body{
         overflow-x: hidden;
+        
     }
 }
+
+//colors 
 .bg-primary{
     background-color: map-get($colors , "primary" );
 }
+.bg-white{
+    background-color: map-get($colors , "light" );
+}
+
+//utilities
+
+.text-center{
+    text-align: center;
+}
+
+.justify-content-center{
+    object-position: center;
+    align-self: center;
+}
+.justify-content-left{
+    object-position: left;
+}
+.justify-content-right{
+    object-position: right;
+}
+
+
+//grid row and column
 
 .row{
     display: grid;
@@ -93,10 +119,7 @@ html{
     }
 }
 
-.text-center{
-    text-align: center;
-}
-
+//list
 .list-group{
     text-decoration: none;
     display: flex;
@@ -105,15 +128,46 @@ html{
     margin:10px;
     border-radius: 6px;
     list-style: none;
+    text-decoration: none;
     .list-group-item{
         padding-left: 4px;
         border-bottom:1px #303a52 solid;
+        text-decoration: none;
     }
     .list-group-item:nth-last-child(1)
     {
      border-bottom: 0;   
     }
 }
+//nav-bar
+
+
+.side-nav{
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    width:10rem;
+    @include breakpoint('mobile-l'){
+        width:80vw;
+        display: none;
+    }    
+    @include breakpoint('tab'){
+        width: 20vh;
+        display: none;
+    }
+}
+.side-nav-content{
+    margin-left: 10rem;
+    @include breakpoint('mobile-l'){
+        margin-left: 0rem;
+    }    
+    @include breakpoint('tab'){
+        margin-left: 0rem;
+    }
+
+}
+
+//media queries
 .desktop{
     @include breakpoint('mobile-l'){
         display: none;

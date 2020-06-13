@@ -1,23 +1,21 @@
 <%- include('./layouts/app') -%> 
-    <div class="row container">
+<div class="bg-primary side-nav">
+    <h5 class="text-center"> Navbar </h5>
+    <div class="list-group text-center bg-white">
+        <a class="list-group-item" href="/">
+            Home
+        </a>
+        <a class="list-group-item" href='/about'>
+            About
+        </a>
+    </div>
+</div>
+    <div class="row container side-nav-content">
         <div class="col-12 text-center">
             <h1><%=title%></h1>
             <hr>
         </div>
-        <div class="col-3 desktop bg-primary">
-            <h5 class="text-center"> Navbar </h5>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    Hello World
-                </li>
-                <li class="list-group-item">
-                    Hello World
-                </li>
-                <li class="list-group-item">
-                    Hello World
-                </li>
-            </ul>
-        </div>
+        
     </div>
 <%- include('./layouts/footer.ejs')  -%> 
 
