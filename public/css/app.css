@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #303a52;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  font-family: "Roboto";
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html body {
+  overflow-x: hidden;
+}
+
+.bg-primary {
+  background-color: #3d5af1;
+}
+
+.row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+}
+
+.row .col {
+  grid-column: span auto;
+}
+
+.row .col-1 {
+  grid-column: span 1;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-1 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-2 {
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-2 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-3 {
+  grid-column: span 3;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-3 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-4 {
+  grid-column: span 4;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-4 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-5 {
+  grid-column: span 5;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-5 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-6 {
+  grid-column: span 6;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-6 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-7 {
+  grid-column: span 7;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-7 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-8 {
+  grid-column: span 8;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-8 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-9 {
+  grid-column: span 9;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-9 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-10 {
+  grid-column: span 10;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-10 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-11 {
+  grid-column: span 11;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-11 {
+    grid-column: span 12;
+  }
+}
+
+.row .col-12 {
+  grid-column: span 12;
+}
+
+@media screen and (max-width: 786px) {
+  .row .col-12 {
+    grid-column: span 12;
+  }
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.m-0 {
+  margin: 0 rem;
+}
+
+.m-1 {
+  margin: 1 rem;
+}
+
+.m-2 {
+  margin: 2 rem;
+}
+
+.m-3 {
+  margin: 3 rem;
+}
+
+.m-4 {
+  margin: 4 rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.list-group {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.list-group .list-group-item {
+  background-color: #fdfdfd;
+  padding-left: 4px;
+  border: 1px #303a52 solid;
+  border-radius: 6px;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 786px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.tab {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .tab div, .tab h1, .tab h2, .tab h3, .tab h4, .tab h5, .tab h6, .tab p, .tab form, .tab header, .tab footer, .tab section {
+    display: block;
+  }
+  .tab span, .tab img, .tab a {
+    display: inline;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 786px) {
+  .mobile div, .mobile h1, .mobile h2, .mobile h3, .mobile h4, .mobile h5, .mobile h6, .mobile p, .mobile form, .mobile header, .mobile footer, .mobile section {
+    display: block;
+  }
+  .mobile span, .mobile img, .mobile a {
+    display: inline;
+  }
+}
+/*# sourceMappingURL=app.css.map */

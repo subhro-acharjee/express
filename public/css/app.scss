@@ -1,0 +1,143 @@
+//variables
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu&display=swap');
+$font-weight:(
+    "bold":700,
+    "medium":500,
+    "regular":400
+);
+$font-family:(
+    1:'Roboto',
+    2:'Ubuntu'
+);
+
+$colors:(
+    "primary":#3d5af1,
+    "secondary":#e2f3f5,
+    "warning":#faee1c,
+    "danger":#ff304f,
+    "sucess":#a7ff83,
+    "dark":#303a52,
+    "light":#fdfdfd
+);
+//break points mixins and screensize map
+
+$breakpoints:(
+    "mobile":576px,
+    "mobile-l":786px,
+    "tab":992px,
+    "desktop":1200px
+);
+
+@mixin breakpoint($point) {
+    @if map-has-key($breakpoints, $point) {
+        // Prints a media query based on the value
+        @media screen and(max-width:#{inspect(map-get($breakpoints, $point))}) {
+          @content;
+        }
+      }
+    
+}
+
+//styles
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: map-get($font-weight , "regular" );
+    font-size: 1.5rem;
+    color: map-get($colors , "dark" );
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: map-get($font-weight ,"medium" );
+    font-family: map-get($font-family , 1 );
+}
+
+html{
+    overflow-x: hidden;
+    body{
+        overflow-x: hidden;
+    }
+}
+.bg-primary{
+    background-color: map-get($colors , "primary" );
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 1rem;
+    .col{
+        grid-column: span auto;
+    }
+    @for $var from 1 to 13 {
+        .col-#{$var}{
+            grid-column: span $var ;
+           
+            @include breakpoint('mobile-l'){
+                grid-column: span 12;
+            }
+        }
+    }
+}
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+@for $var from 0 to 5 {
+    .m-#{$var}{
+        margin: $var rem;
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+
+.list-group{
+    text-decoration: none;
+    display: flex;
+    flex-flow: column;
+    .list-group-item{
+        background-color: map-get($colors , "light");
+        padding-left: 4px;
+        border:1px #303a52 solid;
+        border-radius: 6px;
+        margin-top:2px;
+    }
+}
+.desktop{
+    @include breakpoint('mobile-l'){
+        display: none;
+    }
+    @include breakpoint('tab'){
+        display: none;
+    }
+}
+.tab{
+    display: none;
+   @include breakpoint('tab'){
+       div,h1,h2,h3,h4,h5,h6,p,form,header,footer,section{
+           display: block;
+       }
+       span,img,a{
+           display: inline;
+       }
+   }
+}
+.mobile{
+    display: none;
+    @include breakpoint('mobile-l'){
+        div,h1,h2,h3,h4,h5,h6,p,form,header,footer,section{
+            display: block;
+        }
+        span,img,a{
+            display: inline;
+        }
+    }
+}
+
+
