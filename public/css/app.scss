@@ -280,25 +280,23 @@ form{
 //buttons
 
 .btn{
-    font-weight: map-get($font-weight , "light" );
-    color: black;
-    font-size: 0.6rem;
-    background:none;
-    margin:0.65rem;
-    border:1px #3f3f3f solid;
-    padding: 8px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    text-decoration: none;
+    position: relative;
+
+  display: inline;
+  margin: 12px;
+  padding: 10px;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  text-decoration: none;
+  background-color: #2ecc71;
+  color: #ecf0f1;
+  font-size: 1rem;
+  transition: background-color .3s;
     
-    &:hover{
-        box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0,0,0,0.19);
-        
-        padding: 10px;
-        transition-property: box-shadow padding;
-        transition-duration: 300ms;
-        transition-timing-function: ease-out;
-    }
+   
 }
 //form
 
@@ -314,7 +312,7 @@ form{
     }
     .form-control{
        
-        height:2rem;
+        height:2.3rem;
         border-radius: 5px;
         resize: none;
         font-size: 1.25rem;
